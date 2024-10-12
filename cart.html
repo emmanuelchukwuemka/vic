@@ -1,0 +1,261 @@
+<html>
+ <head>
+  <title>
+   Shopping Cart
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #3a6b4f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .cart-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            color: #3a6b4f;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .cart-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .cart-item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .cart-item-details h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .cart-item-details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+        }
+        .cart-item-quantity input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .cart-item-price {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cart-buttons button {
+            background-color: #3a6b4f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .cart-buttons button:hover {
+            background-color: #2d4b2f;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="cart-container">
+   <h2>
+    Shopping Cart
+   </h2>
+   <div class="cart-item">
+    <img alt="Bag of grains" height="50" src="https://storage.googleapis.com/a1aa/image/POo9DvkXeqWZOyZEm2kmfQQvjSJ6CL3xMJE8iB72QbFvtImTA.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Bag of Grains
+     </h4>
+     <p>
+      High-quality grains for your farm.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="1"/>
+    </div>
+    <div class="cart-item-price">
+     $15.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Basket of nuts" height="50" src="https://storage.googleapis.com/a1aa/image/FMWjCFJsml7XPhUMvUHdsPEFA1cfb9nEZaf00fdfRe7WuFxcC.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Basket of Nuts
+     </h4>
+     <p>
+      Freshly harvested nuts.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="2"/>
+    </div>
+    <div class="cart-item-price">
+     $25.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Vegetables on a plate" height="50" src="https://storage.googleapis.com/a1aa/image/bCbCMEkKqRbTMpluhaQkf3p3j839EE6terbuQ5belakWbRMnA.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Fresh Vegetables
+     </h4>
+     <p>
+      Organic vegetables for your meals.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="1"/>
+    </div>
+    <div class="cart-item-price">
+     $10.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Tomatoes and a knife" height="50" src="https://storage.googleapis.com/a1aa/image/uf1dwrZ03ySrCa7mHfm48dRK4wQPLfgo5jf7gTFl4sGB3iYOB.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Fresh Tomatoes
+     </h4>
+     <p>
+      Juicy and ripe tomatoes.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="3"/>
+    </div>
+    <div class="cart-item-price">
+     $12.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Bottles of oil" height="50" src="https://storage.googleapis.com/a1aa/image/SXT0xzv34P5iAhEvlcENDsWEyTp8J9z2yvnRfdfl0WfRbRMnA.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Bottles of Oil
+     </h4>
+     <p>
+      Pure and natural oil.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="1"/>
+    </div>
+    <div class="cart-item-price">
+     $8.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Cucumber and zucchini" height="50" src="https://storage.googleapis.com/a1aa/image/guJeiN3ULaXxL6UdA0vvSxJqRmlwN5tX9G8hg3bHg870WEzJA.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Cucumber and Zucchini
+     </h4>
+     <p>
+      Fresh and crisp cucumbers and zucchinis.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="2"/>
+    </div>
+    <div class="cart-item-price">
+     $6.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Red pepper" height="50" src="https://storage.googleapis.com/a1aa/image/7nUBeourQkzQLallM9dMkO2vwzlDYEbCoWe6pGeDCilbbRMnA.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Red Pepper
+     </h4>
+     <p>
+      Spicy and fresh red peppers.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="1"/>
+    </div>
+    <div class="cart-item-price">
+     $5.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Yellow pepper" height="50" src="https://storage.googleapis.com/a1aa/image/I07euqaB803EMSjkUlR9tDKfAgkGW78GOXGCyfzeoLpx2iYOB.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Yellow Pepper
+     </h4>
+     <p>
+      Sweet and fresh yellow peppers.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="4"/>
+    </div>
+    <div class="cart-item-price">
+     $7.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Garlic bulb" height="50" src="https://storage.googleapis.com/a1aa/image/hx8bcs0U80bmC5jaWKeeYGqqtRSB0r1df9Xsoe7mnL7X3iYOB.jpg" width="50"/>
+    <div class="cart-item-details">
+     <h4>
+      Garlic Bulb
+     </h4>
+     <p>
+      Fresh and aromatic garlic bulbs.
+     </p>
+    </div>
+    <div class="cart-item-quantity">
+     <input max="10" min="1" type="number" value="1"/>
+    </div>
+    <div class="cart-item-price">
+     $3.00
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Agricultural Tools" height="50" src="https://storage.googleapis.com/a1aa/image/8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8

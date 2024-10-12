@@ -1,0 +1,78 @@
+<html>
+ <head>
+  <title>
+   Farmer Login
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            background-color: #3a6b4f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-container button:hover {
+            background-color: #2d4b2f;
+        }
+        .login-container .signup-link {
+            margin-top: 20px;
+            display: block;
+            color: #3a6b4f;
+            text-decoration: none;
+        }
+        .login-container .signup-link:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="login-container">
+   <h2>
+    Farmer Login
+   </h2>
+   <form>
+    <input name="email" placeholder="Email" required="" type="email"/>
+    <input name="password" placeholder="Password" required="" type="password"/>
+    <button type="submit">
+     Login
+    </button>
+   </form>
+   <a class="signup-link" href="#">
+    Don't have an account? Sign up
+   </a>
+  </div>
+ </body>
+</html>

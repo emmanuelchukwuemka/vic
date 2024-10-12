@@ -1,0 +1,93 @@
+<html>
+ <head>
+  <title>
+   Farmer Sign Up
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .signup-container input, .signup-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-container button {
+            background-color: #3a6b4f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .signup-container button:hover {
+            background-color: #2d4b2f;
+        }
+        .signup-container .login-link {
+            margin-top: 20px;
+            display: block;
+            color: #3a6b4f;
+            text-decoration: none;
+        }
+        .signup-container .login-link:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="signup-container">
+   <h2>
+    Farmer Sign Up
+   </h2>
+   <form>
+    <input name="name" placeholder="Name" required="" type="text"/>
+    <select name="sex" required="">
+     <option value="">
+      Select Sex
+     </option>
+     <option value="male">
+      Male
+     </option>
+     <option value="female">
+      Female
+     </option>
+    </select>
+    <input name="email" placeholder="Email" required="" type="email"/>
+    <input name="age" placeholder="Age" required="" type="number"/>
+    <input name="location" placeholder="Location" required="" type="text"/>
+    <input name="phone" placeholder="Phone Number" required="" type="tel"/>
+    <input name="password" placeholder="Password" required="" type="password"/>
+    <button type="submit">
+     Sign Up
+    </button>
+   </form>
+   <a class="login-link" href="#">
+    Already have an account? Log in
+   </a>
+  </div>
+ </body>
+</html>
