@@ -1,0 +1,15 @@
+CREATE DATABASE farmer_db;
+
+USE farmer_db;
+
+CREATE TABLE farmers (
+  id INT AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  sex VARCHAR(10) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  age INT NOT NULL,
+  location VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);

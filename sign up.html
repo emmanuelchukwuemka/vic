@@ -1,5 +1,7 @@
 <html>
  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
    Farmer Sign Up
   </title>
@@ -63,7 +65,9 @@
    <h2>
     Farmer Sign Up
    </h2>
-   <form>
+
+
+   <form id="sign-up-form">
     <input name="name" placeholder="Name" required="" type="text"/>
     <select name="sex" required="">
      <option value="">
@@ -85,9 +89,36 @@
      Sign Up
     </button>
    </form>
-   <a class="login-link" href="#">
+   <a class="login-link" href="login.html">
     Already have an account? Log in
    </a>
+   <a class="login-link" href="index.html">Home</a>
   </div>
  </body>
+   
+ <script>
+    const form = document.getElementById('sign-up-form');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+      const jsonData = Object.fromEntries(formData.entries());
+  
+      try {
+        const response = await fetch('/sign-up', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(jsonData),
+        });
+  
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  </script>
 </html>
+
+
